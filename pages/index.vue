@@ -1,47 +1,8 @@
 <script setup>
 import { ref } from "vue";
 
-const tarefas = ref([]);
 const novaTarefa = ref('');
-
-async function toggleTarefa(id) {
-  const resultado = await fetch("http://localhost:8000/update/" + id)
-    .then(response => response.json())
-  
-  if (resultado) {
-    const tarefa = tarefas.value.find(tarefa => tarefa.id === id);
-    tarefa.complete = !tarefa.complete;
-  }
-}
-
-async function adicionarTarefa(titulo) {
-  const resultado = await fetch("http://localhost:8000/add", {
-    method: 'POST',
-    headers: {
-      "content-type": "application/x-www-form-urlencoded",
-    },
-    body: `title=${titulo}`,
-  }).then(response => response.json());
-  
-  if (resultado) {
-    carregarTarefas();
-  }
-}
-
-async function deletarTarefa(id) {
-  const resultado = await fetch("http://localhost:8000/delete/" + id)
-    .then(response => response.json());
-  
-  if (resultado) {
-    carregarTarefas();
-  }
-}
-
-function carregarTarefas() {
-  fetch("http://localhost:8000/")
-      .then(response => response.json())
-      .then(data => tarefas.value = data);
-}
+const { tarefas, carregarTarefas, adicionarTarefa, deletarTarefa, toggleTarefa } = useTarefas();
 
 carregarTarefas()
 </script>
