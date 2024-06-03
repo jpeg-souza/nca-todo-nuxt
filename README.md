@@ -77,3 +77,4 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 
 Passo 1 - Adicionar as páginas e componentes nas suas devidas pastas
+Passo 2 - Adicionar estilização no local certo

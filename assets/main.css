@@ -1,0 +1,44 @@
+@import './base.css';
+@import './bootstrap.min.css';
+
+body {
+  background: var(--secondary);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 23px;
+}
+
+.container {
+  min-width: 600px;
+  max-width: 65%;
+}
+
+input[type="text"],
+input[type="text"]:focus {
+  color: var(--light);
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+.todos li {
+  background: var(--primary);
+  color: var(--light);
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.filtered {
+  display: none !important;
+}
+
+.btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+  color: var(--light);
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-radius: 13px 13px;
+  transition: 0.8s;
+}
