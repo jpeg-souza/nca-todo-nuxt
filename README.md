@@ -77,8 +77,9 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 
 Passo 1 - Adicionar as páginas e componentes nas suas devidas pastas
-Passo 2 - Adicionar estilização no local certo
-Passo 3 - Adicionar código javascript no local certo (separar as requisições do código da página)
 
+Passo 2 - Adicionar estilização no local certo]
+
+Passo 3 - Adicionar código javascript no local certo (separar as requisições do código da página)
 
 Passo 4 - Separar entre duas páginas (listar tarefas e adicionar tarefas), passando de uma pra outra utilizando Router ou NuxtLink
